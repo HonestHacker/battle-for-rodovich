@@ -1,0 +1,14 @@
+[remap]
+
+importer="func_godot.map"
+type="Resource"
+uid="uid://k3ryltke3lbw"
+path="res://.godot/imported/de_town.2.map-7a850ee66fd424346947611860a0c084.tres"
+
+[deps]
+
+source_file="res://tb/maps/autosave/de_town.2.map"
+dest_files=["res://.godot/imported/de_town.2.map-7a850ee66fd424346947611860a0c084.tres"]
+
+[params]
+

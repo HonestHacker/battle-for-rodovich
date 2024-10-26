@@ -1,0 +1,14 @@
+[remap]
+
+importer="func_godot.map"
+type="Resource"
+uid="uid://cl4th8osflmiv"
+path="res://.godot/imported/de_town_proto.map-1a6010b0abbec161c48fd73855e1f5c8.tres"
+
+[deps]
+
+source_file="res://tb/maps/de_town_proto.map"
+dest_files=["res://.godot/imported/de_town_proto.map-1a6010b0abbec161c48fd73855e1f5c8.tres"]
+
+[params]
+

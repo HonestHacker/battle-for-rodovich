@@ -1,0 +1,38 @@
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://cegg1gdkh3wna"
+path.s3tc="res://.godot/imported/props_de_town_DefaultMaterial_BaseColor.png-DefaultMaterial_Alpha_30.png-f4223be901f04090e21dd80b5041188b.s3tc.ctex"
+metadata={
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
+}
+generator_parameters={
+"md5": "3c30dd1fb80c225c298c1f2d2005854b"
+}
+
+[deps]
+
+source_file="res://Assets/Models/Maps/props_de_town_DefaultMaterial_BaseColor.png-DefaultMaterial_Alpha_30.png"
+dest_files=["res://.godot/imported/props_de_town_DefaultMaterial_BaseColor.png-DefaultMaterial_Alpha_30.png-f4223be901f04090e21dd80b5041188b.s3tc.ctex"]
+
+[params]
+
+compress/mode=2
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/hdr_compression=1
+compress/normal_map=0
+compress/channel_pack=0
+mipmaps/generate=true
+mipmaps/limit=-1
+roughness/mode=0
+roughness/src_normal=""
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=0

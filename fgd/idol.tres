@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="FuncGodotFGDPointClass" load_steps=3 format=3 uid="uid://btvsx35gsay1t"]
+
+[ext_resource type="Script" path="res://addons/func_godot/src/fgd/func_godot_fgd_point_class.gd" id="1_1yqn5"]
+[ext_resource type="PackedScene" uid="uid://cmbgxrbr733wv" path="res://Scenes/Entities/idol.tscn" id="1_eb83f"]
+
+[resource]
+script = ExtResource("1_1yqn5")
+scene_file = ExtResource("1_eb83f")
+apply_rotation_on_map_build = true
+classname = "idol"
+description = "A idol
+"
+func_godot_internal = false
+base_classes = Array[Resource]([])
+class_properties = {}
+class_property_descriptions = {}
+meta_properties = {
+"color": Color(1, 0.662745, 0, 1),
+"size": AABB(-8, -8, -16, 8, 8, 16)
+}
+node_class = "Marker3D"
+name_property = ""

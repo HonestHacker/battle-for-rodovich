@@ -1,0 +1,233 @@
+[gd_scene load_steps=21 format=3 uid="uid://jtia61xt3nbg"]
+
+[ext_resource type="Script" path="res://addons/MultiplayCore/MultiPlay.gd" id="1_qj2ju"]
+[ext_resource type="PackedScene" uid="uid://cr2ersq7g6q6f" path="res://Scenes/Characters/player.tscn" id="2_cqmr0"]
+[ext_resource type="PackedScene" uid="uid://bv41uomtudrje" path="res://Scenes/Maps/de_town.tscn" id="3_016pc"]
+[ext_resource type="Script" path="res://addons/MultiplayCore/net_protocols/ENetProtocol.gd" id="4_3i5vy"]
+[ext_resource type="Script" path="res://Scripts/UI/main_menu.gd" id="5_0k2tt"]
+[ext_resource type="Texture2D" uid="uid://becsylu2i2wd4" path="res://Assets/Textures/main_menu_background.png" id="5_lsym0"]
+[ext_resource type="Texture2D" uid="uid://dsa6pgnhbhupr" path="res://Assets/Textures/textlogo.png" id="6_fqkwx"]
+[ext_resource type="Texture2D" uid="uid://c7oaynblgmadf" path="res://Assets/Textures/main_menu_buttons.png" id="7_fgsmh"]
+[ext_resource type="Texture2D" uid="uid://birb621dhyqp1" path="res://Assets/Textures/main_menu_button_hovered.png" id="8_l02vp"]
+[ext_resource type="AudioStream" uid="uid://d187ydrov333r" path="res://Assets/Sounds/OR_RUSSY 2024-10-05.mp3" id="10_tt7fp"]
+[ext_resource type="VideoStream" path="res://Assets/Videos/tutorial.ogv" id="11_qfge6"]
+[ext_resource type="Script" path="res://Scripts/UI/audio_settings.gd" id="12_eq4wa"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7pkm0"]
+atlas = ExtResource("7_fgsmh")
+region = Rect2(50.5692, 81.7617, 282.954, 132.045)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vhsy8"]
+atlas = ExtResource("8_l02vp")
+region = Rect2(91.8128, 59.693, 372.028, 129.324)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tsthb"]
+atlas = ExtResource("7_fgsmh")
+region = Rect2(57.6429, 244.46, 367.84, 120.255)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wvsg1"]
+atlas = ExtResource("8_l02vp")
+region = Rect2(98.899, 221.818, 393.287, 124.009)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_15fky"]
+atlas = ExtResource("7_fgsmh")
+region = Rect2(69.4327, 397.727, 396.135, 120.255)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1yih7"]
+atlas = ExtResource("8_l02vp")
+region = Rect2(107.757, 374.172, 395.058, 124.009)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1ipbc"]
+atlas = ExtResource("7_fgsmh")
+region = Rect2(64.7168, 539.204, 247.585, 122.613)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jm12b"]
+atlas = ExtResource("8_l02vp")
+region = Rect2(105.282, 516.513, 243.59, 124.718)
+
+[node name="main" type="Node"]
+
+[node name="MultiPlayCore" type="Node" parent="."]
+script = ExtResource("1_qj2ju")
+max_players = 10
+player_scene = ExtResource("2_cqmr0")
+first_scene = ExtResource("3_016pc")
+debug_gui_enabled = false
+
+[node name="ENetProtocol" type="Node" parent="MultiPlayCore"]
+script = ExtResource("4_3i5vy")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = 2
+
+[node name="MainMenu" type="Control" parent="CanvasLayer" node_paths=PackedStringArray("mpc")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("5_0k2tt")
+mpc = NodePath("../../MultiPlayCore")
+
+[node name="Background" type="TextureRect" parent="CanvasLayer/MainMenu"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("5_lsym0")
+expand_mode = 1
+
+[node name="EscapeBackground" type="ColorRect" parent="CanvasLayer/MainMenu"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.211765, 0.0901961, 0.0588235, 0.678431)
+
+[node name="TextLogo" type="TextureRect" parent="CanvasLayer/MainMenu"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -633.297
+offset_bottom = 125.0
+grow_horizontal = 0
+texture = ExtResource("6_fqkwx")
+expand_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/MainMenu"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -210.0
+offset_right = 396.0
+offset_bottom = 210.0
+grow_vertical = 2
+scale = Vector2(1.5, 1.5)
+
+[node name="CreateGame" type="TextureButton" parent="CanvasLayer/MainMenu/VBoxContainer"]
+layout_mode = 2
+texture_normal = SubResource("AtlasTexture_7pkm0")
+texture_hover = SubResource("AtlasTexture_vhsy8")
+stretch_mode = 5
+
+[node name="Tutorial" type="TextureButton" parent="CanvasLayer/MainMenu/VBoxContainer"]
+layout_mode = 2
+texture_normal = SubResource("AtlasTexture_tsthb")
+texture_hover = SubResource("AtlasTexture_wvsg1")
+stretch_mode = 5
+
+[node name="Settings" type="TextureButton" parent="CanvasLayer/MainMenu/VBoxContainer"]
+layout_mode = 2
+texture_normal = SubResource("AtlasTexture_15fky")
+texture_hover = SubResource("AtlasTexture_1yih7")
+stretch_mode = 5
+
+[node name="Exit" type="TextureButton" parent="CanvasLayer/MainMenu/VBoxContainer"]
+layout_mode = 2
+texture_normal = SubResource("AtlasTexture_1ipbc")
+texture_hover = SubResource("AtlasTexture_jm12b")
+stretch_mode = 5
+
+[node name="CreatingGameMenu" type="Window" parent="CanvasLayer/MainMenu"]
+title = "Онлайн игра..."
+initial_position = 1
+size = Vector2i(300, 150)
+visible = false
+
+[node name="Control" type="Control" parent="CanvasLayer/MainMenu/CreatingGameMenu"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/MainMenu/CreatingGameMenu/Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="IP" type="LineEdit" parent="CanvasLayer/MainMenu/CreatingGameMenu/Control/VBoxContainer"]
+layout_mode = 2
+placeholder_text = "Введите IP-адрес..."
+
+[node name="OrLabel" type="Label" parent="CanvasLayer/MainMenu/CreatingGameMenu/Control/VBoxContainer"]
+layout_mode = 2
+text = "или..."
+
+[node name="ConnectToOfficialServer" type="Button" parent="CanvasLayer/MainMenu/CreatingGameMenu/Control/VBoxContainer"]
+layout_mode = 2
+text = "Подключиться к оф. серверу."
+
+[node name="CreateServer" type="Button" parent="CanvasLayer/MainMenu/CreatingGameMenu/Control/VBoxContainer"]
+layout_mode = 2
+text = "Создать сервер."
+
+[node name="Music" type="AudioStreamPlayer" parent="CanvasLayer/MainMenu"]
+stream = ExtResource("10_tt7fp")
+autoplay = true
+
+[node name="TutorialWindow" type="Window" parent="CanvasLayer/MainMenu"]
+title = "Обучение"
+initial_position = 1
+size = Vector2i(1280, 720)
+visible = false
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="CanvasLayer/MainMenu/TutorialWindow"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+stream = ExtResource("11_qfge6")
+
+[node name="Settings" type="Window" parent="CanvasLayer/MainMenu"]
+title = "Настройки."
+initial_position = 1
+size = Vector2i(600, 500)
+visible = false
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/MainMenu/Settings"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="CanvasLayer/MainMenu/Settings/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 48
+text = "Аудио:"
+horizontal_alignment = 1
+
+[node name="Audio" type="HSlider" parent="CanvasLayer/MainMenu/Settings/VBoxContainer"]
+layout_mode = 2
+max_value = 1.0
+step = 0.05
+script = ExtResource("12_eq4wa")
+
+[connection signal="pressed" from="CanvasLayer/MainMenu/VBoxContainer/CreateGame" to="CanvasLayer/MainMenu" method="_on_create_game_pressed"]
+[connection signal="pressed" from="CanvasLayer/MainMenu/VBoxContainer/Tutorial" to="CanvasLayer/MainMenu" method="_on_tutorial_pressed"]
+[connection signal="pressed" from="CanvasLayer/MainMenu/VBoxContainer/Settings" to="CanvasLayer/MainMenu" method="_on_settings_pressed"]
+[connection signal="pressed" from="CanvasLayer/MainMenu/VBoxContainer/Exit" to="CanvasLayer/MainMenu" method="_on_exit_pressed"]
+[connection signal="close_requested" from="CanvasLayer/MainMenu/CreatingGameMenu" to="CanvasLayer/MainMenu" method="_on_creating_game_menu_close_requested"]
+[connection signal="text_submitted" from="CanvasLayer/MainMenu/CreatingGameMenu/Control/VBoxContainer/IP" to="CanvasLayer/MainMenu" method="_on_ip_text_submitted"]
+[connection signal="pressed" from="CanvasLayer/MainMenu/CreatingGameMenu/Control/VBoxContainer/ConnectToOfficialServer" to="CanvasLayer/MainMenu" method="_on_connect_to_official_server_pressed"]
+[connection signal="pressed" from="CanvasLayer/MainMenu/CreatingGameMenu/Control/VBoxContainer/CreateServer" to="CanvasLayer/MainMenu" method="_on_create_server_pressed"]
+[connection signal="close_requested" from="CanvasLayer/MainMenu/TutorialWindow" to="CanvasLayer/MainMenu" method="_on_tutorial_window_close_requested"]
+[connection signal="close_requested" from="CanvasLayer/MainMenu/Settings" to="CanvasLayer/MainMenu" method="_on_settings_close_requested"]
+[connection signal="value_changed" from="CanvasLayer/MainMenu/Settings/VBoxContainer/Audio" to="CanvasLayer/MainMenu/Settings/VBoxContainer/Audio" method="_on_value_changed"]

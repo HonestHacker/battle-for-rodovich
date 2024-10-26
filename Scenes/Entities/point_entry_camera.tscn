@@ -1,0 +1,4 @@
+[gd_scene format=3 uid="uid://gfcc4atsidqw"]
+
+[node name="PointEntryCamera" type="Camera3D"]
+current = true

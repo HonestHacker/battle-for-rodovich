@@ -1,0 +1,167 @@
+[gd_resource type="AnimationNodeBlendTree" load_steps=25 format=3 uid="uid://bu6gaihh3laqj"]
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_ewfkp"]
+animation = &"Block2"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_0yuiv"]
+animation = &"death1"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_t7gh7"]
+animation = &"Idle1"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_68y8a"]
+animation = &"Block1"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_egcdq"]
+animation = &"walkhands1"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_ufbyo"]
+animation = &"RunHands1"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_xnhr6"]
+animation = &"Idle2"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_0okro"]
+animation = &"WalkHands2"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_qaqsy"]
+animation = &"RunHands2"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_0056m"]
+animation = &"Fight2"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_q0jwa"]
+animation = &"Fight1"
+
+[sub_resource type="AnimationNodeBlend2" id="AnimationNodeBlend2_qjm1i"]
+filter_enabled = true
+filters = ["Armature_015/Skeleton3D:Bone.010", "Armature_015/Skeleton3D:Bone.011", "Armature_015/Skeleton3D:Bone.012", "Armature_015/Skeleton3D:Bone.013", "Armature_015/Skeleton3D:Bone.014", "Armature_015/Skeleton3D:Bone.015", "Armature_044/Skeleton3D:Bone.010", "Armature_044/Skeleton3D:Bone.011", "Armature_044/Skeleton3D:Bone.012", "Armature_044/Skeleton3D:Bone.013", "Armature_044/Skeleton3D:Bone.014", "Armature_044/Skeleton3D:Bone.015"]
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_6rcwr"]
+animation = &"Idle1"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_1vyfj"]
+animation = &"Jump1"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_a4hmh"]
+animation = &"RunLegs2"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_hcc4l"]
+animation = &"walklegs1"
+
+[sub_resource type="AnimationNodeTransition" id="AnimationNodeTransition_mh4j6"]
+input_0/name = "alive"
+input_0/auto_advance = false
+input_0/break_loop_at_end = false
+input_0/reset = true
+input_1/name = "died"
+input_1/auto_advance = false
+input_1/break_loop_at_end = false
+input_1/reset = true
+
+[sub_resource type="AnimationNodeTransition" id="AnimationNodeTransition_luyc2"]
+input_0/name = "grounded"
+input_0/auto_advance = false
+input_0/break_loop_at_end = false
+input_0/reset = true
+input_1/name = "air"
+input_1/auto_advance = false
+input_1/break_loop_at_end = false
+input_1/reset = true
+
+[sub_resource type="AnimationNodeBlend3" id="AnimationNodeBlend3_pg66d"]
+
+[sub_resource type="AnimationNodeBlend3" id="AnimationNodeBlend3_aa6qw"]
+
+[sub_resource type="AnimationNodeBlend3" id="AnimationNodeBlend3_moig5"]
+
+[sub_resource type="AnimationNodeTransition" id="AnimationNodeTransition_eyele"]
+input_0/name = "idle"
+input_0/auto_advance = false
+input_0/break_loop_at_end = false
+input_0/reset = true
+input_1/name = "attack"
+input_1/auto_advance = false
+input_1/break_loop_at_end = false
+input_1/reset = true
+input_2/name = "parry"
+input_2/auto_advance = false
+input_2/break_loop_at_end = false
+input_2/reset = true
+
+[sub_resource type="AnimationNodeTransition" id="AnimationNodeTransition_cwskc"]
+input_0/name = "idle"
+input_0/auto_advance = false
+input_0/break_loop_at_end = false
+input_0/reset = true
+input_1/name = "attack"
+input_1/auto_advance = false
+input_1/break_loop_at_end = false
+input_1/reset = true
+input_2/name = "parry"
+input_2/auto_advance = false
+input_2/break_loop_at_end = false
+input_2/reset = true
+
+[sub_resource type="AnimationNodeTransition" id="AnimationNodeTransition_1bcga"]
+input_0/name = "onehanded"
+input_0/auto_advance = false
+input_0/break_loop_at_end = false
+input_0/reset = true
+input_1/name = "twohanded"
+input_1/auto_advance = false
+input_1/break_loop_at_end = false
+input_1/reset = true
+
+[resource]
+graph_offset = Vector2(57.3735, -55.4464)
+nodes/Animation/node = SubResource("AnimationNodeAnimation_q0jwa")
+nodes/Animation/position = Vector2(180, -640)
+"nodes/Animation 10/node" = SubResource("AnimationNodeAnimation_ewfkp")
+"nodes/Animation 10/position" = Vector2(380, -80)
+"nodes/Animation 11/node" = SubResource("AnimationNodeAnimation_0yuiv")
+"nodes/Animation 11/position" = Vector2(720, 120)
+"nodes/Animation 2/node" = SubResource("AnimationNodeAnimation_t7gh7")
+"nodes/Animation 2/position" = Vector2(-100, -760)
+"nodes/Animation 3/node" = SubResource("AnimationNodeAnimation_68y8a")
+"nodes/Animation 3/position" = Vector2(160, -480)
+"nodes/Animation 4/node" = SubResource("AnimationNodeAnimation_egcdq")
+"nodes/Animation 4/position" = Vector2(-100, -620)
+"nodes/Animation 5/node" = SubResource("AnimationNodeAnimation_ufbyo")
+"nodes/Animation 5/position" = Vector2(-100, -480)
+"nodes/Animation 6/node" = SubResource("AnimationNodeAnimation_xnhr6")
+"nodes/Animation 6/position" = Vector2(-280, -400)
+"nodes/Animation 7/node" = SubResource("AnimationNodeAnimation_0okro")
+"nodes/Animation 7/position" = Vector2(-260, -280)
+"nodes/Animation 8/node" = SubResource("AnimationNodeAnimation_qaqsy")
+"nodes/Animation 8/position" = Vector2(-340, -140)
+"nodes/Animation 9/node" = SubResource("AnimationNodeAnimation_0056m")
+"nodes/Animation 9/position" = Vector2(180, -140)
+nodes/Blend2/node = SubResource("AnimationNodeBlend2_qjm1i")
+nodes/Blend2/position = Vector2(600, -100)
+nodes/Idle/node = SubResource("AnimationNodeAnimation_6rcwr")
+nodes/Idle/position = Vector2(-60, -140)
+nodes/Jumping/node = SubResource("AnimationNodeAnimation_1vyfj")
+nodes/Jumping/position = Vector2(220, 260)
+nodes/Running/node = SubResource("AnimationNodeAnimation_a4hmh")
+nodes/Running/position = Vector2(-80, 160)
+nodes/Walking/node = SubResource("AnimationNodeAnimation_hcc4l")
+nodes/Walking/position = Vector2(-60, 20)
+nodes/died_alive_transition/node = SubResource("AnimationNodeTransition_mh4j6")
+nodes/died_alive_transition/position = Vector2(900, -40)
+nodes/ground_air_transition/node = SubResource("AnimationNodeTransition_luyc2")
+nodes/ground_air_transition/position = Vector2(420, 120)
+nodes/iwr_blend/node = SubResource("AnimationNodeBlend3_pg66d")
+nodes/iwr_blend/position = Vector2(240, 0)
+nodes/iwr_blend2/node = SubResource("AnimationNodeBlend3_aa6qw")
+nodes/iwr_blend2/position = Vector2(180, -860)
+nodes/iwr_blend3/node = SubResource("AnimationNodeBlend3_moig5")
+nodes/iwr_blend3/position = Vector2(160, -340)
+nodes/onehanded_attack_state/node = SubResource("AnimationNodeTransition_eyele")
+nodes/onehanded_attack_state/position = Vector2(440, -640)
+nodes/output/position = Vector2(1100, 0)
+nodes/twohanded_attack_state/node = SubResource("AnimationNodeTransition_cwskc")
+nodes/twohanded_attack_state/position = Vector2(420, -340)
+nodes/weapon_type/node = SubResource("AnimationNodeTransition_1bcga")
+nodes/weapon_type/position = Vector2(640, -440)
+node_connections = [&"Blend2", 0, &"weapon_type", &"Blend2", 1, &"ground_air_transition", &"died_alive_transition", 0, &"Blend2", &"died_alive_transition", 1, &"Animation 11", &"ground_air_transition", 0, &"iwr_blend", &"ground_air_transition", 1, &"Jumping", &"iwr_blend", 0, &"Idle", &"iwr_blend", 1, &"Walking", &"iwr_blend", 2, &"Running", &"iwr_blend2", 0, &"Animation 2", &"iwr_blend2", 1, &"Animation 4", &"iwr_blend2", 2, &"Animation 5", &"iwr_blend3", 0, &"Animation 6", &"iwr_blend3", 1, &"Animation 7", &"iwr_blend3", 2, &"Animation 8", &"onehanded_attack_state", 0, &"iwr_blend2", &"onehanded_attack_state", 1, &"Animation", &"onehanded_attack_state", 2, &"Animation 3", &"output", 0, &"died_alive_transition", &"twohanded_attack_state", 0, &"iwr_blend3", &"twohanded_attack_state", 1, &"Animation 9", &"twohanded_attack_state", 2, &"Animation 10", &"weapon_type", 0, &"onehanded_attack_state", &"weapon_type", 1, &"twohanded_attack_state"]

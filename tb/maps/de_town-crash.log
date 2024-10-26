@@ -1,0 +1,44 @@
+Renderer info: NVIDIA GeForce GTX 1650/PCIe/SSE2 version 4.6.0 NVIDIA 560.81 from NVIDIA Corporation
+Depth buffer bits: 24
+Multisampling enabled
+Adding file system path "C:/Users/user/Desktop/Program/TrenchBroom\\defaults\\assets"
+Creating new document
+Loaded entity definition file Stalemate.fgd
+Loaded texture collection '"textures"'
+Adding file system path "C:/Users/user/Desktop/Program/TrenchBroom\\defaults\\assets"
+Adding file system path "E:/Program/Games/Stalemate/third-person-controller/tb\\."
+Loaded texture collection '"textures"'
+Loaded texture collection '"textures\\dev\\Dark"'
+Loaded texture collection '"textures\\dev\\Green"'
+Loaded texture collection '"textures\\dev\\Light"'
+Loaded texture collection '"textures\\dev\\Orange"'
+Loaded texture collection '"textures\\dev\\Purple"'
+Loaded texture collection '"textures\\dev\\Red"'
+Adding file system path "C:/Users/user/Desktop/Program/TrenchBroom\\defaults\\assets"
+Adding file system path "E:/Program/Games/Stalemate/third-person-controller/tb\\."
+Loading document from E:/Program/Games/Stalemate/de_town.map
+Loaded entity definition file Stalemate.fgd
+Loaded texture collection '"textures"'
+Loaded texture collection '"textures\\dev\\Dark"'
+Loaded texture collection '"textures\\dev\\Green"'
+Loaded texture collection '"textures\\dev\\Light"'
+Loaded texture collection '"textures\\dev\\Orange"'
+Loaded texture collection '"textures\\dev\\Purple"'
+Loaded texture collection '"textures\\dev\\Red"'
+Loaded "E:/Program/Games/Stalemate/de_town.map" in 458ms
+Created autosave backup at "E:\\Program\\Games\\Stalemate\\autosave\\de_town.1.map"
+Saved "E:/Program/Games/Stalemate/de_town.map" in 10ms
+Saved "E:/Program/Games/Stalemate/third-person-controller/tb/maps/de_town.map" in 7ms
+Saved "E:/Program/Games/Stalemate/third-person-controller/tb/maps/de_town.map" in 4ms
+Could not clip brush: Brush is empty
+Could not clip brush: Brush is empty
+Saved "E:/Program/Games/Stalemate/third-person-controller/tb/maps/de_town.map" in 4ms
+Reloading texture collections
+Loaded texture collection '"textures"'
+Loaded texture collection '"textures\\dev\\Dark"'
+Loaded texture collection '"textures\\dev\\Green"'
+Loaded texture collection '"textures\\dev\\Light"'
+Loaded texture collection '"textures\\dev\\Orange"'
+Loaded texture collection '"textures\\dev\\Purple"'
+Loaded texture collection '"textures\\dev\\Red"'
+Reloading entity definitions

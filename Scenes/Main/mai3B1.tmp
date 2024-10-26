@@ -1,0 +1,36 @@
+[gd_scene load_steps=6 format=3 uid="uid://jtia61xt3nbg"]
+
+[ext_resource type="Script" path="res://addons/MultiplayCore/MultiPlay.gd" id="1_qj2ju"]
+[ext_resource type="PackedScene" uid="uid://cr2ersq7g6q6f" path="res://Scenes/Characters/player.tscn" id="2_cqmr0"]
+[ext_resource type="PackedScene" uid="uid://bv41uomtudrje" path="res://Scenes/Maps/de_town.tscn" id="3_016pc"]
+[ext_resource type="Script" path="res://addons/MultiplayCore/net_protocols/ENetProtocol.gd" id="4_3i5vy"]
+[ext_resource type="Texture2D" uid="uid://bkvoangdonq18" path="res://Assets/Textures/paper_background.jpg" id="5_gnm3i"]
+
+[node name="main" type="Node"]
+
+[node name="MultiPlayCore" type="Node" parent="."]
+script = ExtResource("1_qj2ju")
+max_players = 10
+player_scene = ExtResource("2_cqmr0")
+first_scene = ExtResource("3_016pc")
+
+[node name="ENetProtocol" type="Node" parent="MultiPlayCore"]
+script = ExtResource("4_3i5vy")
+
+[node name="MainMenu" type="Control" parent="."]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="MainMenu"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("5_gnm3i")

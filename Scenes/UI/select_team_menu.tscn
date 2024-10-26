@@ -1,0 +1,70 @@
+[gd_scene load_steps=7 format=3 uid="uid://d17e6xq4bvd16"]
+
+[ext_resource type="Script" path="res://Scripts/UI/select_team_menu.gd" id="1_b4roe"]
+[ext_resource type="FontFile" uid="uid://dbqt3pscv31td" path="res://Assets/Fonts/Cyrillic Old [Edited by me].otf" id="2_66dn6"]
+[ext_resource type="Texture2D" uid="uid://cfbd50stdrsqf" path="res://Assets/Textures/ckzh.png" id="3_mvfbq"]
+[ext_resource type="AudioStream" uid="uid://dta7vf7u55ma7" path="res://Assets/Sounds/dictor_team_choice.mp3" id="4_mppfh"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qqm1i"]
+atlas = ExtResource("3_mvfbq")
+region = Rect2(191.294, 203.806, 506.738, 694.049)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5phxp"]
+atlas = ExtResource("3_mvfbq")
+region = Rect2(910.619, 214.033, 944.242, 660.792)
+
+[node name="SelectTeamMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_b4roe")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.0475577, 0.0475576, 0.0475576, 0.647059)
+
+[node name="VSplitContainer" type="VSplitContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+dragger_visibility = 1
+
+[node name="Title" type="Label" parent="VSplitContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_66dn6")
+theme_override_font_sizes/font_size = 64
+text = "Выбери сторону..."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HSplitContainer" type="HBoxContainer" parent="VSplitContainer"]
+layout_mode = 2
+
+[node name="Rus" type="TextureButton" parent="VSplitContainer/HSplitContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+texture_normal = SubResource("AtlasTexture_qqm1i")
+ignore_texture_size = true
+
+[node name="Lizard" type="TextureButton" parent="VSplitContainer/HSplitContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+texture_normal = SubResource("AtlasTexture_5phxp")
+
+[node name="DictorReplica" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_mppfh")
+
+[connection signal="visibility_changed" from="." to="." method="_on_visibility_changed"]
+[connection signal="pressed" from="VSplitContainer/HSplitContainer/Rus" to="." method="_on_rus_pressed"]
+[connection signal="pressed" from="VSplitContainer/HSplitContainer/Lizard" to="." method="_on_lizard_pressed"]

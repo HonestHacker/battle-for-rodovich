@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://bura6h774tdcd"]
+
+[ext_resource type="Texture2D" uid="uid://cmkl2ub6vlhf3" path="res://tb/textures/cardboard/Sprite-0007.png" id="1_htfgq"]
+
+[resource]
+albedo_texture = ExtResource("1_htfgq")
+metallic_specular = 0.0
+texture_filter = 2

@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="FuncGodotFGDFile" load_steps=7 format=3 uid="uid://8x76j6q18y3a"]
+
+[ext_resource type="Script" path="res://addons/func_godot/src/fgd/func_godot_fgd_file.gd" id="1_5d2t7"]
+[ext_resource type="Resource" uid="uid://crgpdahjaj" path="res://addons/func_godot/fgd/func_godot_fgd.tres" id="1_cy1tr"]
+[ext_resource type="Resource" uid="uid://fy270rh6yk45" path="res://fgd/info_player_rus.tres" id="2_c1uo1"]
+[ext_resource type="Resource" uid="uid://wawtwlrxgj2i" path="res://fgd/info_player_lizard.tres" id="3_k517w"]
+[ext_resource type="Resource" uid="uid://cmvrtt4xb7au1" path="res://fgd/point_entry_camera.tres" id="4_td3ui"]
+[ext_resource type="Resource" uid="uid://btvsx35gsay1t" path="res://fgd/idol.tres" id="5_6avt0"]
+
+[resource]
+script = ExtResource("1_5d2t7")
+export_file = false
+model_key_word_supported = true
+fgd_name = "Stalemate"
+base_fgd_files = Array[Resource]([ExtResource("1_cy1tr")])
+entity_definitions = Array[Resource]([ExtResource("2_c1uo1"), ExtResource("3_k517w"), ExtResource("4_td3ui"), ExtResource("5_6avt0")])

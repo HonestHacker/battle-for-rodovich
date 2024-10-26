@@ -1,0 +1,14 @@
+[remap]
+
+importer="func_godot.map"
+type="Resource"
+uid="uid://b74crrdundjbl"
+path="res://.godot/imported/de_town-crash.map-d9e157d44e5ce7d746a7cbb472003b69.tres"
+
+[deps]
+
+source_file="res://tb/maps/de_town-crash.map"
+dest_files=["res://.godot/imported/de_town-crash.map-d9e157d44e5ce7d746a7cbb472003b69.tres"]
+
+[params]
+

@@ -1,0 +1,3 @@
+[gd_scene format=3 uid="uid://cg6loy0rco261"]
+
+[node name="InfoPlayerLizard" type="Marker3D" groups=["lizards_spawnpoints"]]
